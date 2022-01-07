@@ -104,8 +104,9 @@ body {
     transition: 0.2s ease;
 }
 
-@media only screen and (min-width:376px) {
+@media only screen and (min-width:760px) {
     #carList {
+        width: 720px;
         flex-direction: row;
     }
 }

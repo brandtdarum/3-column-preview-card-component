@@ -1,0 +1,117 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons)
+padding: 0.7rem 1rem;: hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700
+
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+*/
+$font-size: 0.9375rem;
+
+$border-radius: 10px;
+
+$light: hsla(0, 0%, 100%, 0.75);
+$secondary: hsl(0, 0%, 95%);
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+main {
+    min-height: 100vh;
+}
+
+#card-container {
+    width: 320px;
+    margin: 30px 0px;
+
+    .card {
+        border-radius: 0px;
+
+        .card-title {
+            font-family: 'Big Shoulders Display', cursive;
+            font-size: 3rem;
+        }
+
+        .card-text {
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+            opacity: 0.75;
+        }
+
+        &:nth-child(1) {
+            --color: hsl(31, 77%, 52%);
+            background-color: var(--color);
+            
+            button {
+                padding: 0.7rem 1rem;
+                span {color: var(--color);}
+                &.btn:hover {background-color: var(--color);}
+                &.btn:hover span {color: $light;}
+            }
+        }
+        &:nth-child(2) {
+            --color: hsl(184, 100%, 22%);
+            background-color: var(--color);
+            
+            button {
+                padding: 0.7rem 1rem;
+                span {color: var(--color);}
+                &.btn:hover {background-color: var(--color);}
+                &.btn:hover span {color: $light;}
+            }
+        }
+        &:nth-child(3) {
+            --color: hsl(179, 100%, 13%);
+            background-color: var(--color);
+            
+            button {
+                padding: 0.7rem 1rem;
+                span {color: var(--color);}
+                &.btn:hover {background-color: var(--color);}
+                &.btn:hover span {color: $light;}
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #card-container {
+        width: 870px;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
